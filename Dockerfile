@@ -74,3 +74,13 @@ LABEL org.label-schema.schema-version=1.0 \
       org.label-schema.vcs-ref=$org_label_schema_vcs_ref \
       org.label-schema.build-date=$org_label_schema_build_date \
       org.opencord.vcs-commit-date=$org_opencord_vcs_commit_date
+
+WORKDIR /openmme/target/lib
+RUN cp * /usr/local/lib
+RUN cd /usr/local/lib
+RUN ldconfig
+WORKDIR /openmme/target/conf
+RUN  ./make_certs.sh mme localdomain
+RUN apt-get update
+RUN apt-get -y install vim
+EXPOSE 36412

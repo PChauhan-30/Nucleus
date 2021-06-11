@@ -10,4 +10,9 @@
 #
 
 echo "Killing MME application"
-killall -9 mme-app s1ap-app s11-app s6a-app
+#killall -9 mme-app s1ap-app s11-app s6a-app
+pkill mme-app
+pkill s1ap-app
+pkill s11-app
+pkill s6a-app
+pkill s10-app

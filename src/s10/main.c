@@ -162,6 +162,10 @@ int init_gtpv2()
 
 	bind(g_s10_fd, (struct sockaddr *)&g_client_addr, sizeof(g_client_addr));
 	g_client_addr_size = sizeof(g_client_addr);
+	g_s10_cp_addr.sin_family = AF_INET;
+	g_s10_cp_addr.sin_addr.s_addr = htonl(g_s10_cfg.target_mme_ip);
+	g_s10_cp_addr.sin_port = htons(g_s10_cfg.egtp_def_port);
+	g_s10_serv_size = sizeof(g_s10_cp_addr);
 
 	return SUCCESS;
 }

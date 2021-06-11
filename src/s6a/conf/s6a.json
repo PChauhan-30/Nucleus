@@ -1,6 +1,6 @@
 {
 	"mme": {
-		"ip_addr": "192.168.1.55",
+		"ip_addr": "10.253.12.52",
 		"name": "vmmestandalone",
 		"group_id": 1,
 		"code": 1,
@@ -22,7 +22,7 @@
 		"egtp_default_hostname": "sutlej.ccin.ccpu.com"
 	},
 	"s11": {
-		"egtp_local_addr": "192.168.1.55",
+		"egtp_local_addr": "10.253.12.52",
 		"egtp_default_port": 2123,
 		"sgw_addr": "127.0.0.1",
 		"pgw_addr": "192.168.1.105"

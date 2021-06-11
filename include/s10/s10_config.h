@@ -13,13 +13,10 @@
 
 typedef struct s10_config
 {
-	unsigned int sgw_ip;
-	unsigned int pgw_ip;
 	unsigned int egtp_def_port;
 	unsigned int local_egtp_ip;
 	
 	unsigned int target_mme_ip;
-
 
 } s10_config_t;
 
